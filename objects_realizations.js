@@ -43,7 +43,7 @@ document.write(`<p> Function #1 - Lists items for a particular student:${getSubj
    
    
     const average = Object.values(arr.subjects).flat();
-   return (average.reduce((sum, element) => {
+   return Number(average.reduce((sum, element) => {
     
       return sum += element;
       
@@ -58,9 +58,7 @@ document.write(`<p> Function #2 - The average mark on all subjects:${getAverageM
 function getStudentInfo(student){
   
     const {course, name} = student;
-    const objStudentInfo = {
-      course,
-      name,
+    const objStudentInfo = { course, name,
       averageMark: getAverageMark(student),
   };
   return objStudentInfo;
