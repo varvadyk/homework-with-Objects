@@ -39,14 +39,10 @@ document.write(`<p> Function #1 - Lists items for a particular student:${getSubj
 
 
  //function 2
- function getAverageMark(arr){
-   
-   
+ function getAverageMark(arr)
     const average = Object.values(arr.subjects).flat();
    return Number(average.reduce((sum, element) => {
-    
       return sum += element;
-      
   }, 0 )/average. length).toFixed(2);
   
 }
@@ -56,7 +52,6 @@ document.write(`<p> Function #2 - The average mark on all subjects:${getAverageM
 
 //function 3
 function getStudentInfo(student){
-  
     const {course, name} = student;
     const objStudentInfo = { course, name,
       averageMark: getAverageMark(student),
@@ -66,16 +61,9 @@ function getStudentInfo(student){
 console.log(getStudentInfo(students[0]));
 document.write(`<p> Function #3 - Returns general information on the transferred student: in console </p>`);
 
-
-
-
-   
-  
  //function 4
-
  function getStudentsNames(students){
-   const result=students.map((object,i)=>students[i].name).sort();
-   return result
+  return result=students.map((object,i)=>students[i].name).sort();
  }
  document.write(`<p> Function #4 - Counts arithmetic mean  :${getStudentsNames(students)}</p>`);
 
@@ -95,7 +83,6 @@ document.write(`<p> Function #3 - Returns general information on the transferred
 
  //function 6
 function calculateWordLetters(letter){
-  
 const sums={};
 for (let i = 0; i < letter.length; i++) {
 if(sums[letter[i]]){
