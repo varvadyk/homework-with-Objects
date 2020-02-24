@@ -29,8 +29,8 @@ const students = [{
  
  function getSubjects (student){
   const teaching= Object.keys(student.subjects);
-  studentsSubjects = teaching.map(function(value){
-    let nameSubjects = value.split('_').join(' ');
+  const studentsSubjects = teaching.map(function(value){
+  const nameSubjects = value.split('_').join(' ');
     return nameSubjects.slice(0,1).toUpperCase()+nameSubjects.slice(1);
   });
   return studentsSubjects;
@@ -63,7 +63,8 @@ document.write(`<p> Function #3 - Returns general information on the transferred
 
  //function 4
  function getStudentsNames(students){
-  return result=students.map((object,i)=>students[i].name).sort();
+  const result =students.map((object,i)=>students[i].name).sort();
+      return result;
  }
  document.write(`<p> Function #4 - Counts arithmetic mean  :${getStudentsNames(students)}</p>`);
 
