@@ -39,7 +39,7 @@ document.write(`<p> Function #1 - Lists items for a particular student:${getSubj
 
 
  //function 2
- function getAverageMark(arr)
+ function getAverageMark(arr){
     const average = Object.values(arr.subjects).flat();
    return Number(average.reduce((sum, element) => {
       return sum += element;
@@ -63,7 +63,7 @@ document.write(`<p> Function #3 - Returns general information on the transferred
 
  //function 4
  function getStudentsNames(students){
-  const result =students.map((object,i)=>students[i].name).sort();
+  const result =students.map((object,i)=>object.name).sort();
       return result;
  }
  document.write(`<p> Function #4 - Counts arithmetic mean  :${getStudentsNames(students)}</p>`);
