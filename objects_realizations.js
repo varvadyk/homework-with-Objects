@@ -70,16 +70,22 @@ document.write(`<p> Function #3 - Returns general information on the transferred
 
 
  //function 5
- function getBestStudent(students){
-   let bestMark=0;
-    return students.map(Obj=>getStudentInfo(Obj)).reduce((name,element)=>{
-  if(bestMark<element.averageMark){
-    bestMark=element.averageMark;
-    name=element.name;
+ const getBestStudent = (students) =>{
+  
+   let bestName = '';
+   Object.values(students).forEach((element) =>{
+    let bestMark=0;
+    const getmark = getAverageMark(element);
+    if(bestMark<getmark){
+    bestMark=getmark;
+    bestName=element.name;
+  
   }
-  return name;
-   })
- }
+    });
+  
+    return bestName;
+    
+}
  document.write(`<p> Function #5 - Returns the best student on the average grade list  :${getBestStudent(students)}</p>`);
 
  //function 6
